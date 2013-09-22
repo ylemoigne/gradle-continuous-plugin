@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+group = "fr.javatic.gradle.plugin"
+//archiveTask.baseName="continuous"
+version = "0.1.0-SNAPSHOT"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile gradleApi()
+	compile localGroovy()
+}

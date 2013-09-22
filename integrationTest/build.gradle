@@ -1,0 +1,15 @@
+buildscript {
+	repositories {
+		mavenLocal()
+	}
+	dependencies {
+		classpath 'fr.javatic.gradle.plugin:gradle-continuous-plugin:0.1.0-SNAPSHOT'
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'continuous'
+
+continuous {
+	tasks = [project.tasks.compileJava]
+}
